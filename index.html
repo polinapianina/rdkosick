@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>R.D. Kosick's Writing</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom Styles -->
+  <style>
+    /* Font Definitions */
+    @font-face {
+      font-family: 'KosickHeader';
+      src: url('fonts/Cinematografica-Thin-trial.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'KosickMenu';
+      src: url('fonts/Cinematografica-Light-trial.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'KosickBlock';
+      src: url('fonts/Cinematografica-Extralight-trial.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    /* R.D. KOSICK header (display-4) becomes MUCH larger and uses KosickHeader */
+    .display-4 {
+      font-family: 'KosickHeader', sans-serif;
+      font-size: 96px; /* Adjust as needed for "way way bigger" appearance */
+    }
+    
+    /* Menu tab text: using KosickMenu with increased font size */
+    .navbar-nav .nav-link {
+      font-family: 'KosickMenu', sans-serif;
+      font-size: 1.5rem; /* Increase font size for menu items */
+    }
+    
+    /* Ensure dropdown items also use the same custom font */
+    .dropdown-item {
+      font-family: 'KosickMenu', sans-serif;
+      font-size: 1.5rem;
+    }
+    
+    /* For block titles and article titles use KosickBlock */
+    .content-block h2,
+    .content-block h4 {
+      font-family: 'KosickBlock', sans-serif;
+    }
+    
+    /* For published-date and any paragraph text in blocks, use Times New Roman */
+    .content-block p,
+    .content-block .published-date {
+      font-family: "Times New Roman", Times, serif;
+    }
+    
+    /* 1. Background Color Change for the Main Page */
+    body {
+      background-color: #e0dccc; /* Change this value to your desired color */
+    }
+    
+    /* Customizing the dropdown menu background */
+    .dropdown-menu {
+      background-color: #e0dccc;
+      border: none;
+    }
+    
+    /* Customizing content blocks */
+    .content-block {
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      color: #333;
+    }
+    .essays-block {
+      background-color: #a1c790; /* Light red */
+    }
+    .fiction-block {
+      background-color: #f7ec58; /* Light blue */
+    }
+    .reviews-block {
+      background-color: #e18f2a; /* Light green */
+    }
+    
+    /* Optional: Adjust collapse container alignment on mobile */
+    @media (max-width: 991.98px) {
+      #navbarNav {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar: Always collapsed with hamburger on the left -->
+  <nav class="navbar navbar-light" style="background-color: #e0dccc;">
+    <!-- Hamburger Toggler on the left -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Collapsible Menu Items aligned left -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#essays">Essays</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#fiction">Fiction</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#reviews" id="reviewsDropdown" role="button" data-toggle="dropdown" 
+             aria-haspopup="true" aria-expanded="false">
+            Reviews
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="reviewsDropdown">
+            <a class="dropdown-item" href="#books">Books</a>
+            <a class="dropdown-item" href="#movies">Movies</a>
+            <a class="dropdown-item" href="#music">Music</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- R.D. Kosick Name as a Header (Large and Centered) -->
+  <div class="container text-center my-4">
+    <h1 class="display-4">R.D. KOSICK</h1>
+  </div>
+  
+  <!-- Main Content Section -->
+  <div class="container">
+    <!-- Dynamic Blocks Section (Vertical Order) -->
+    <div id="dynamic-blocks" class="row">
+      <!-- Essays Block -->
+      <div class="col-12 content-block essays-block" data-date="2025-04-10T12:00:00">
+        <h2>Essays</h2>
+        <hr>
+        <h4 id="essays-title">Lorem Ipsum</h4>
+        <p class="published-date">2025-04-10</p>
+        <img src="images/placeholder-essays.jpg" class="img-fluid" alt="Essay Thumbnail">
+      </div>
+      <!-- Fiction Block -->
+      <div class="col-12 content-block fiction-block" data-date="2025-04-09T12:00:00">
+        <h2>Fiction</h2>
+        <hr>
+        <h4 id="fiction-title">Lorem Ipsum</h4>
+        <p class="published-date">2025-04-09</p>
+        <img src="images/placeholder-fiction.jpg" class="img-fluid" alt="Fiction Thumbnail">
+      </div>
+      <!-- Reviews Block -->
+      <div class="col-12 content-block reviews-block" data-date="2025-04-08T12:00:00">
+        <h2>Reviews</h2>
+        <hr>
+        <h4 id="reviews-title">Lorem Ipsum</h4>
+        <p class="published-date">2025-04-08</p>
+        <img src="images/placeholder-reviews.jpg" class="img-fluid" alt="Review Thumbnail">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bootstrap JS and Dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <!-- Optional: Custom JS for Dynamic Reordering -->
+  <script>
+    // This script reorders the content blocks based on the most recent date.
+    function reorderBlocks() {
+      var container = document.getElementById('dynamic-blocks');
+      var blocks = Array.from(container.getElementsByClassName('content-block'));
+
+      blocks.sort(function(a, b) {
+        return new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date'));
+      });
+
+      // Append blocks back to the container in sorted order
+      blocks.forEach(function(block) {
+        container.appendChild(block);
+      });
+    }
+
+    // Call reorderBlocks on page load.
+    document.addEventListener('DOMContentLoaded', reorderBlocks);
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
